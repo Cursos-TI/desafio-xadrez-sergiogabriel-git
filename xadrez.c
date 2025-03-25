@@ -7,14 +7,16 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-    unsigned int movimento_bispo;
-    unsigned int movimento_torre;
-    unsigned int movimento_rainha;
+    unsigned int movimento_bispo = 0;
+    unsigned int movimento_torre = 0;
+    unsigned int movimento_rainha = 0;
+    const unsigned int max_bispo = 5;
+    const unsigned int max_torre = 5;
+    const unsigned int max_rainha = 8;
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    movimento_bispo = 0;
-    while(movimento_bispo <= 5) {
+    while(movimento_bispo <= max_torre) {
         printf("Cima\n");
         printf("Direita\n");
         movimento_bispo++;
@@ -22,15 +24,14 @@ int main() {
 
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-    movimento_torre = 0;
     do {
         printf("Direita\n");
         movimento_torre++;
-    } while(movimento_torre <= 5);
+    } while(movimento_torre <= max_torre);
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-    for(movimento_rainha = 0; movimento_rainha <= 8; movimento_rainha++) {
+    for(movimento_rainha; movimento_rainha <= max_rainha; movimento_rainha++) {
         printf("Esquerda\n");
     }
 
