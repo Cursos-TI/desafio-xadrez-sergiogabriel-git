@@ -46,9 +46,9 @@ int main() {
     printf("CAVALO\n");
     for(movimento_cavalo_i; movimento_cavalo_i <= 1; movimento_cavalo_i++) {
         for(movimento_cavalo_j; movimento_cavalo_j <= 2; movimento_cavalo_j++) {
-            printf("Baixo\n")
+            printf("Baixo\n");
         }
-        printf("Esquerda\n")
+        printf("Esquerda\n");
     }
     printf("\n");
     // Nível Mestre - Funções Recursivas e Loops Aninhados
