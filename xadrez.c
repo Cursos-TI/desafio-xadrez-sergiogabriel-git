@@ -15,6 +15,7 @@ int main() {
     const unsigned int max_bispo = 5;
     const unsigned int max_torre = 5;
     const unsigned int max_rainha = 8;
+    const unsigned int max_cavalo = 1;
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
@@ -44,8 +45,8 @@ int main() {
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
     printf("CAVALO\n");
-    for(movimento_cavalo_i; movimento_cavalo_i <= 1; movimento_cavalo_i++) {
-        for(movimento_cavalo_j; movimento_cavalo_j <= 2; movimento_cavalo_j++) {
+    for(movimento_cavalo_i; movimento_cavalo_i < max_cavalo; movimento_cavalo_i++) {
+        for(movimento_cavalo_j; movimento_cavalo_j <= max_cavalo; movimento_cavalo_j++) {
             printf("Baixo\n");
         }
         printf("Esquerda\n");
