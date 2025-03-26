@@ -4,6 +4,36 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+// Procedimentos para Nível Mestre - inicio
+void bispo(unsigned short int n) {
+    if(n > 0) {
+        printf("Cima\n");
+        printf("Direita\n");
+        bispo(n-1);
+    }
+}
+void torre(unsigned short int n) {
+    if(n > 0) {
+        printf("Direita\n");
+        torre(n-1);
+    }
+}
+void rainha(unsigned short int n) {
+    if(n > 0) {
+        printf("Direita\n");
+        rainha(n-1);
+    }
+}
+void cavalo(unsigned short int n) {
+    if(n > 0) {
+        printf("Baixo\n");
+        printf("Baixo\n");
+        printf("Esquerda\n");
+        cavalo(n-1);
+    }
+}
+// Procedimentos para Nível Mestre - fim
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -20,7 +50,7 @@ int main() {
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     printf("BISPO\n");
-    while(movimento_bispo <= max_torre) {
+    while(movimento_bispo <= max_bispo) {
         printf("Cima\n");
         printf("Direita\n");
         movimento_bispo++;
@@ -55,9 +85,20 @@ int main() {
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
+    // Chamada dos procedimento Nível Mestre
+    //Movimento BISPO
+    printf("BISPO\n");
+    bispo(5);
+    //Movimento TORRE
+    printf("TORRE\n");
+    torre(5);
+    //Movimento RAINHA
+    printf("RAINHA\n");
+    rainha(8);
+    //Movimento CAVALO
+    printf("CAVALO\n");
+    cavalo(1);
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-
     return 0;
 }
